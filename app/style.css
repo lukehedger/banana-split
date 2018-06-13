@@ -1,0 +1,303 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  font-family: Helvetica, Arial, sans-serif;
+  overflow-y: scroll;
+}
+
+@media (min-width: 40em) {
+  html, body {
+    overflow: hidden;
+  }
+}
+
+a {
+  display: inline-block;
+}
+
+header {
+  padding: 0 8px;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 120px;
+  background: url('./img/2mr-logo.svg') no-repeat 0 0;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+nav > * {
+  margin: 0 8px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon-cart {
+  width: 32px;
+  height: 32px;
+  background: url('./img/icon-cart.png') no-repeat center;
+  background-size: contain;
+}
+
+.icon-search {
+  width: 32px;
+  height: 32px;
+  background: url('./img/icon-search.png') no-repeat center;
+  background-size: contain;
+}
+
+.link {
+  display: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: 40em) {
+  .link {
+    display: inline-block;
+  }
+}
+
+video {
+  max-width: 100%;
+}
+
+.youtube-wrap {
+  width: 800px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.youtube {
+  width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+  position: relative;
+}
+
+.youtube iframe {
+  width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box > * {
+  flex: 0 0 100%;
+  padding: 16px;
+}
+
+@media (min-width: 40em) {
+  .image {
+    flex: none;
+    width: 33.333%;
+    min-width: 350px;
+  }
+}
+
+.heading {
+  margin: 0;
+  text-align: center;
+  font-size: 48px;
+  opacity: 0;
+  transform: translateY(5px);
+  animation: creep 0.5s 1s ease-in 1 forwards;
+}
+
+@media (min-width: 40em) {
+  .heading {
+    margin-top: 32px;
+  }
+}
+
+.highlight-red {
+  color: red;
+}
+
+.lulu {
+  width: 347px;
+  height: 400px;
+  margin: 0 auto;
+  background: url('./img/lulu.png') no-repeat 0 0;
+  background-size: cover;
+  animation: lulu 0.5s 0.5s ease-in 1 forwards;
+  opacity: 0;
+  transform: translateY(10px) rotate3d(0, 0, 1, 5deg);
+  transform-origin: center;
+}
+
+.subheading {
+  margin: 8px 0 16px;
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(5px);
+  animation: creep 0.5s 1.5s ease-in 1 forwards;
+}
+
+@media (min-width: 40em) {
+  .subheading {
+    margin-bottom: 64px;
+  }
+}
+
+.tagline {
+  font-size: 20px;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(5px);
+  animation: creep 0.5s 2s ease-in 1 forwards;
+}
+
+.text {
+  align-self: center;
+  max-width: 580px;
+}
+
+@media (min-width: 40em) {
+  .text {
+    flex: 1;
+  }
+}
+
+.popup {
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.75);
+  transform-origin: center;
+  animation: pop 0.25s ease-in 1 forwards;
+}
+
+.popup.popup-1 {
+  width: 232px;
+  height: 244px;
+  background-image: url('./img/popup-1.png');
+}
+
+.popup.popup-2 {
+  width: 232px;
+  height: 244px;
+  background-image: url('./img/popup-2.png');
+}
+
+.popup.popup-3 {
+  width: 232px;
+  height: 244px;
+  background-image: url('./img/popup-3.png');
+}
+
+.popup.popup-4 {
+  width: 232px;
+  height: 244px;
+  background-image: url('./img/popup-4.png');
+}
+
+.popup.popup-5 {
+  width: 340px;
+  height: 250px;
+  background-image: url('./img/popup-5.png');
+}
+
+.popup.popup-6 {
+  width: 339px;
+  height: 264px;
+  background-image: url('./img/popup-6.png');
+}
+
+.popup.popup-7 {
+  width: 339px;
+  height: 264px;
+  background-image: url('./img/popup-7.png');
+}
+
+.popup.popup-8 {
+  width: 463px;
+  height: 302px;
+  background-image: url('./img/popup-8.png');
+}
+
+.popup.popup-9 {
+  width: 463px;
+  height: 302px;
+  background-image: url('./img/popup-9.png');
+}
+
+.popup.popup-10 {
+  width: 463px;
+  height: 302px;
+  background-image: url('./img/popup-10.png');
+}
+
+.popup-close {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@keyframes creep {
+  from {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes lulu {
+  from {
+    transform: translateY(10px) rotate3d(0, 0, 1, 5deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
